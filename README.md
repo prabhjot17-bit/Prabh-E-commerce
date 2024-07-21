@@ -1,7 +1,7 @@
 # E-Commerce Project
 
 **Student Name**:Prabhjot Kaur
-**Student Number**: 
+**Student Number**: 8963796
 **Date**: 21-07-2024
 
 ### Technology Stack
