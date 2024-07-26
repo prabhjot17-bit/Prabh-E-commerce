@@ -13,8 +13,8 @@
 ### Project Setup
 
 1. **Project Initialization**: Repository created.
-2. **Frontend Setup**: Will initialize ReactJS project.
-3. **Backend Setup**: I will initialize Node.js project with Express and connected to MongoDB (Atlas).
+2. **Frontend Setup**: ReactJS project created.
+3. **Backend Setup**: NodeJS project created.
 ### Database Schema Design
 
 #### User Schema
@@ -44,4 +44,4 @@
 ### Notes
 
 - The project is set up on the local machine and uploaded to GitHub.
-- Development will start in the next phase.
+- Development is started.
