@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/ProductDetail.css';
 
-const ProductDetail = () => {
+const ProductDetail = ({ addToCart, cart, removeFromCart }) => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const navigate = useNavigate();
+  const [isAdded, setIsAdded] = useState(false);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -15,12 +15,26 @@ const ProductDetail = () => {
         setProduct(response.data);
       } catch (error) {
         console.error('Error fetching product:', error);
-        navigate('/');
       }
     };
 
     fetchProduct();
-  }, [id, navigate]);
+  }, [id]);
+
+  useEffect(() => {
+    if (cart.some((item) => item._id === id)) {
+      setIsAdded(true);
+    }
+  }, [cart, id]);
+
+  const handleAddToCart = () => {
+    if (isAdded) {
+      removeFromCart(product._id);
+    } else {
+      addToCart(product);
+    }
+    setIsAdded(!isAdded);
+  };
 
   if (!product) {
     return <div>Loading...</div>;
@@ -37,7 +51,14 @@ const ProductDetail = () => {
         <p className="price">Price: ${product.price}</p>
         <p className="category">Category: {product.category}</p>
         <div className="product-buttons">
-          <button className="btn add-to-cart">Add to Cart</button>
+          <button
+            className="btn add-to-cart"
+            onClick={handleAddToCart}
+            title={isAdded ? 'Click to remove from cart' : 'Click to add to cart'}
+            style={isAdded ? { backgroundColor: '#ff6347' } : {}}
+          >
+            {isAdded ? 'Remove from Cart' : 'Add to Cart'}
+          </button>
           <button className="btn buy-now">Buy</button>
         </div>
       </div>

@@ -13,7 +13,7 @@
   
   .product-image img {
     width: 100%;
-    max-width: 600px; /* Larger image size */
+    max-width: 600px;
     height: auto;
   }
   
@@ -64,5 +64,11 @@
   .buy-now {
     background-color: #007bff;
     color: white;
+  }
+  
+  .btn[disabled] {
+    background-color: #28a745;
+    color: white;
+    cursor: not-allowed;
   }
   
