@@ -41,3 +41,4 @@
 - Development is started.
 - Product page completed
 - Added Navbar 
+- added API to get product by id
