@@ -1,7 +1,7 @@
 const express = require('express');
 const Product = require('../models/Product');
 
-const router = express.Router();
+const router =express.Router();
 
 // @desc    Get all products
 // @route   GET /api/products
@@ -22,11 +22,11 @@ router.get('/products/:id', async (req, res) => {
       const product = await Product.findById(req.params.id);
       if (product) {
         res.json(product);
-      } else {
-        res.json([]);
+      } else{
+        res.status(404).json({message: 'some error occured or product not found' });
       }
     } catch (error) {
-      res.json({ message:"some error occured or product not found"});
+      res.status(500).json({ message:"some error occured or product not found" });
     }
   });
   

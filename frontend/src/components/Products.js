@@ -32,7 +32,7 @@ const Products = () => {
               <button className="btn add-to-cart">Add to Cart</button>
               <button className="btn buy-now">Buy</button>
               <Link to={`/products/${product._id}`} className="more-info">
-              <button className="btn more-info">More</button>
+              <button className="btn more-info">Details</button>
               </Link>
             </div>
           </div>

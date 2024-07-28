@@ -42,3 +42,4 @@
 - Product page completed
 - Added Navbar 
 - added API to get product by id
+- Implemented product details on frontend
