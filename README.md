@@ -17,27 +17,21 @@
 3. **Backend Setup**: NodeJS project created.
 ### Database Schema Design
 
-#### User Schema
-- `username`: String (required, unique)
-- `password`: String (required)
-- `email`: String (required, unique)
-- `isAdmin`: Boolean (default: false)
-
 #### Product Schema
 - `name`: String (required)
 - `description`: String
 - `price`: Number (required)
 - `imageUrl`: String
+- `category`: String
 
 #### Order Schema
-- `userId`: ObjectId (ref: 'User', required)
+- `userName`:String (required)
 - `totalPrice`: Number (required)
 - `address`: String (required)
-- `orderItemId`: ObjectId (ref: 'OrderItem', required)
 
 #### OrderItem Schema
 - `orderId`: ObjectId (ref: 'Order', required)
-- `productId`: ObjectId (ref: 'Product', required)
+- `productId`: ObjectId (ref: 'ProductS', required)
 - `quantity`: Number (required)
 - `price`: Number (required)
 
