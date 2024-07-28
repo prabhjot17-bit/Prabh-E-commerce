@@ -39,3 +39,5 @@
 
 - The project is set up on the local machine and uploaded to GitHub.
 - Development is started.
+- Product page completed
+
