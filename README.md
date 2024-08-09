@@ -15,6 +15,11 @@
 1. **Project Initialization**: Repository created.
 2. **Frontend Setup**: ReactJS project created.
 3. **Backend Setup**: NodeJS project created.
+
+### Admin username and password 
+username: admin
+password: admin
+
 ### Database Schema Design
 
 #### Product Schema
