@@ -44,3 +44,5 @@
 - added API to get product by id
 - Implemented product details on frontend
 - Implemented cart 
+- implemented buy and checkout
+- implemented admin dashboard

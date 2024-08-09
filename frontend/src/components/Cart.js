@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Cart.css';
 
 const Cart = ({ cart, removeFromCart, adjustQuantity }) => {
+  const navigate = useNavigate();
+
   const handleQuantityChange = (productId, quantity) => {
     if (quantity >= 1) {
       adjustQuantity(productId, quantity);
@@ -24,8 +27,8 @@ const Cart = ({ cart, removeFromCart, adjustQuantity }) => {
               <p>Price: ${item.price}</p>
               <input
                 type="number"
-            value={item.quantity}
-            onChange={(e) => handleQuantityChange(item._id, parseInt(e.target.value))}
+                value={item.quantity}
+                onChange={(e) => handleQuantityChange(item._id, parseInt(e.target.value))}
                 min="1"
                 className="quantity-input"
               />
@@ -35,10 +38,10 @@ const Cart = ({ cart, removeFromCart, adjustQuantity }) => {
         ))
       )}
       <div className="cart-total">
-    <h3>Total: ${totalPrice.toFixed(2)}</h3>
-</div>
-<div className="cart-checkout">
-<button className="btn checkout-btn" disabled={cart.length === 0}>
+        <h3>Total: ${totalPrice.toFixed(2)}</h3>
+      </div>
+      <div className="cart-checkout">
+        <button className="btn checkout-btn" onClick={() => navigate('/checkout')} disabled={cart.length === 0}>
           Checkout
         </button>
       </div>

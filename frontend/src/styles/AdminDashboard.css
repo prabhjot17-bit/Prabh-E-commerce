@@ -1,0 +1,85 @@
+.admin-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .admin-section {
+    margin-bottom: 40px;
+  }
+  
+  .admin-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .admin-section input,
+  .admin-section select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .admin-section button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .admin-section button:hover {
+    background-color: #218838;
+  }
+  
+  .admin-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .admin-section li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .admin-section li input {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .admin-section li button {
+    background-color: #dc3545;
+    border-radius: 3px;
+  }
+  
+  .admin-section li button:hover {
+    background-color: #c82333;
+  }
+  
+  .status-message {
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+  }
+  
+  .category-select {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .category-select select,
+  .category-select input {
+    width: 48%;
+  }
+  
+  .category-select input {
+    margin-left: 4%;
+  }
+  

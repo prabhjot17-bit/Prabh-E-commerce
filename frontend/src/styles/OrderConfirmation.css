@@ -1,0 +1,43 @@
+.order-confirmation {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .order-details {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .order-details p {
+    margin: 5px 0;
+  }
+  
+  .order-details h3 {
+    margin-top: 20px;
+  }
+  
+  .order-details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .order-details ul li {
+    margin: 5px 0;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #218838;
+  }
+  

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/ProductDetail.css';
 
-const ProductDetail = ({ addToCart, cart, removeFromCart }) => {
+const ProductDetail = ({ addToCart, cart, removeFromCart, buyNow }) => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [isAdded, setIsAdded] = useState(false);
 
@@ -36,6 +37,11 @@ const ProductDetail = ({ addToCart, cart, removeFromCart }) => {
     setIsAdded(!isAdded);
   };
 
+  const handleBuyNow = () => {
+    buyNow(product);
+    navigate('/checkout');
+  };
+
   if (!product) {
     return <div>Loading...</div>;
   }
@@ -59,7 +65,7 @@ const ProductDetail = ({ addToCart, cart, removeFromCart }) => {
           >
             {isAdded ? 'Remove from Cart' : 'Add to Cart'}
           </button>
-          <button className="btn buy-now">Buy</button>
+          <button className="btn buy-now" onClick={handleBuyNow}>Buy</button>
         </div>
       </div>
     </div>
