@@ -14,6 +14,14 @@
 Username - "admin"
 Password - "admin"
 
+### Tests to check
+Create, Read, Delete Products
+Create, Read, Update and Delete Categories
+Add products to cart
+adjust quantities in cart 
+remove product from cart
+
+These are ten tests you can check
 
 ### Steps to run ptoject
 1. Download from github and unzip 
